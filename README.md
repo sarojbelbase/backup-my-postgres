@@ -1,4 +1,4 @@
-# Database Backup
+# Backup My Postgres
 
 This project is to backup the database from EC2 Instance to s3 Bucket using python. It automatically dumps PostgreSQL backups to Amazon S3.
 
