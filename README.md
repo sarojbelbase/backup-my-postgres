@@ -26,6 +26,8 @@ This project is to backup the database from EC2 Instance to s3 Bucket using pyth
 aws s3 mb s3://example-backup-bucket --profile your-profile --region "ap-south-1"
 ```
 
+NOTE: `run.py` is using `Asia/Kathmandu` Timezone & the database names are hard coded as `DATABASES`, please modify before running this script.
+
 ## Usage
 
 - Install dependencies:
@@ -54,5 +56,7 @@ aws s3 mb s3://example-backup-bucket --profile your-profile --region "ap-south-1
 - Use cron to run the script every day at 02:00AM NEPALI TIME (UTC+5:45)
 
   ```bash
-  0 22 * * * /home/ubuntu/database-backup/run.py
+  0 22 * * * python3 /home/ubuntu/backup-my-postgres/run.py
   ```
+
+### Made with ❤️ in Nepal.
