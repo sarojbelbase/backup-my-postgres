@@ -14,7 +14,7 @@ S3_BUCKET = environ.get("S3_BUCKET")
 ACCESS_KEY = environ.get("AWS_ACCESS_KEY_ID")
 SECRET_KEY = environ.get("AWS_SECRET_ACCESS_KEY")
 DATABASE_USERNAME = environ.get("DATABASE_USERNAME")
-DATABASES = ["db_zero", "db_two", "db_one"]
+DATABASES = environ.get("DATABASES").split(",")
 
 session = Session(
     aws_access_key_id=ACCESS_KEY,
